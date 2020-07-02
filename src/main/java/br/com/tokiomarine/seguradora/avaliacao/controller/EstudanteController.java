@@ -56,7 +56,7 @@ public class EstudanteController {
 			return "cadastrar-estudante";
 		}
 
-		service.cadastrarEstudante(estudante);
+		service.salvarEstudante(estudante);
 
 		return listarEstudantes(model);
 	}
@@ -74,7 +74,7 @@ public class EstudanteController {
 			return "atualizar-estudante";
 		}
 
-		service.atualizarEstudante(estudante);
+		service.salvarEstudante(estudante);
 
 		return listarEstudantes(model);
 	}

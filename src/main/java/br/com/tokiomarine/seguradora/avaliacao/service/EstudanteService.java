@@ -15,11 +15,9 @@ public interface EstudanteService {
 
 	List<Estudante> buscarEstudantes();
 
-	void cadastrarEstudante(@Valid Estudante estudante);
+	Estudante salvarEstudante(@Valid Estudante estudante);
 
 	Estudante buscarEstudante(Long id);
 
-	void atualizarEstudante(@Valid Estudante estudante);
-	
 	void deletarEstudante(Long id);
 }

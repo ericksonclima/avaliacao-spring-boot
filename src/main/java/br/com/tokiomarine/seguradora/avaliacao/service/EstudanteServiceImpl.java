@@ -23,14 +23,10 @@ public class EstudanteServiceImpl implements EstudanteService {
 	private EstudanteRepository repository;
 
 	@Override
-	public void cadastrarEstudante(@Valid Estudante estudante) {
-		repository.save(estudante);
+	public Estudante salvarEstudante(@Valid Estudante estudante) {
+		return repository.save(estudante);
 	}
 
-	@Override
-	public void atualizarEstudante(@Valid Estudante estudante) {
-		repository.save(estudante);
-	}
 
 	@Override
 	public List<Estudante> buscarEstudantes() {
