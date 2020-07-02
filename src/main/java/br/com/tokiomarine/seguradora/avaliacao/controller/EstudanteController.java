@@ -58,7 +58,7 @@ public class EstudanteController {
 
 		service.cadastrarEstudante(estudante);
 
-		return "redirect:listar";
+		return listarEstudantes(model);
 	}
 
 	@GetMapping("editar/{id}")
@@ -76,14 +76,12 @@ public class EstudanteController {
 
 		service.atualizarEstudante(estudante);
 
-		model.addAttribute("estudantes", service.buscarEstudantes());
-		return "index";
+		return listarEstudantes(model);
 	}
 
 	@GetMapping("apagar/{id}")
 	public String apagarEstudante(@PathVariable("id") long id, Model model) {
-		// TODO IMPLEMENTAR A EXCLUSAO DE ESTUDANTES
-		model.addAttribute("estudantes", service.buscarEstudantes());
-		return "index";
+		service.deletarEstudante(id);
+		return listarEstudantes(model);
 	}
 }

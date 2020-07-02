@@ -42,4 +42,8 @@ public class EstudanteServiceImpl implements EstudanteService {
 		return repository.findById(id).orElse(null);
 	}
 
+	@Override
+	public void deletarEstudante(Long id) {
+		repository.deleteById(id);
+	}
 }

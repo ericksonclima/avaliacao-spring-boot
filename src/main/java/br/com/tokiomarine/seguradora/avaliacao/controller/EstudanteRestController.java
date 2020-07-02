@@ -2,8 +2,8 @@ package br.com.tokiomarine.seguradora.avaliacao.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.tokiomarine.seguradora.avaliacao.entidade.Estudante;
 import br.com.tokiomarine.seguradora.avaliacao.service.EstudanteService;
-import br.com.tokiomarine.seguradora.avaliacao.service.EstudanteServiceImpl;
 
 /**
  * Rest Controller Estudantes

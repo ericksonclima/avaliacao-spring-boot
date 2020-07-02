@@ -20,4 +20,6 @@ public interface EstudanteService {
 	Estudante buscarEstudante(Long id);
 
 	void atualizarEstudante(@Valid Estudante estudante);
+	
+	void deletarEstudante(Long id);
 }
