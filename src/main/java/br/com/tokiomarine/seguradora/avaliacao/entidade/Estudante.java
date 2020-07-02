@@ -28,6 +28,13 @@ public class Estudante {
 	@NotBlank
 	private String email;
 	
+	@Column(name="matricula")
+	@NotBlank(message = "Matrícula é obrigatória")
+	private String matricula;
+	
+	@Column(name="curso")
+	private String curso;
+	
 	@Column(name="telefone")
 	private String telefone;
 
@@ -65,6 +72,22 @@ public class Estudante {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
+	}
+
+	public String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	public String getCurso() {
+		return curso;
+	}
+
+	public void setCurso(String curso) {
+		this.curso = curso;
 	}
 	
 }
