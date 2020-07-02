@@ -1,7 +1,10 @@
 package br.com.tokiomarine.seguradora.avaliacao.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.tokiomarine.seguradora.avaliacao.entidade.Estudante;
 import br.com.tokiomarine.seguradora.avaliacao.service.EstudanteService;
-import br.com.tokiomarine.seguradora.avaliacao.service.EstudanteServiceImpl;
 /**
  * Controller MVC  Estudantes
  * @see Estudante
@@ -24,17 +26,27 @@ import br.com.tokiomarine.seguradora.avaliacao.service.EstudanteServiceImpl;
 @RequestMapping("/estudantes/")
 public class EstudanteController {
 
-	// TODO efetue a correção dos problemas que existem na classe Estudante Controller
-	EstudanteService service;
+	@Autowired
+	private EstudanteService service;
 
+	/**
+	 *  Navega ate a pagina de criação de estudantes
+	 * @param estudante
+	 * @return
+	 */
 	@GetMapping("criar")
 	public String iniciarCastrado(Estudante estudante) {
 		return "cadastrar-estudante";
 	}
 
+	
 	@GetMapping("listar")
 	public String listarEstudantes(Model model) {
-		model.addAttribute("estudtes", service.buscarEstudantes());
+		List<Estudante> estudantes = service.buscarEstudantes();
+		if(estudantes.isEmpty()) {
+			estudantes = null;
+		}
+		model.addAttribute("estudantes", estudantes);
 		return "index";
 	}
 

@@ -16,6 +16,5 @@ import br.com.tokiomarine.seguradora.avaliacao.entidade.Estudante;
 @Repository
 public interface EstudanteRepository extends CrudRepository<Estudante, Long>{
 
-	List<Estudante> findByName(String name);
 
 }
