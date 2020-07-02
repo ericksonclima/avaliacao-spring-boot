@@ -1,6 +1,18 @@
 package br.com.tokiomarine.seguradora.avaliacao.controller;
 
-// TODO não esquecer de usar as anotações para criação do restcontroller
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.tokiomarine.seguradora.avaliacao.service.EstudanteService;
+import br.com.tokiomarine.seguradora.avaliacao.service.EstudanteServiceImpl;
+
+/**
+ * Rest Controller Estudantes
+ * @see Estudante
+ * @see EstudanteService
+ * @author Erick Lima
+ *
+ */
+@RestController("/rs/estudantes/")
 public class EstudanteRestController {
 
 	// TODO caso você não conheça THEMELEAF faça a implementação dos métodos em forma de RESTCONTROLLER (seguindo o padrão RESTFUL)

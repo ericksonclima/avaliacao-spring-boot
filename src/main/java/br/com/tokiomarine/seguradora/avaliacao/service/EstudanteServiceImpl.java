@@ -7,8 +7,13 @@ import javax.validation.Valid;
 import br.com.tokiomarine.seguradora.avaliacao.entidade.Estudante;
 import br.com.tokiomarine.seguradora.avaliacao.repository.EstudanteRepository;
 
-// TODO Efetue a implementação dos métodos da classe service
-public class EstudanteServiceImpl implements EstudandeService {
+/**
+ * Implementação {@link EstudanteService}
+ * 
+ * @author Erickson Lima
+ *
+ */
+public class EstudanteServiceImpl implements EstudanteService {
 
 	EstudanteRepository repository;
 

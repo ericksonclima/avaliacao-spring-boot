@@ -6,7 +6,12 @@ import javax.validation.Valid;
 
 import br.com.tokiomarine.seguradora.avaliacao.entidade.Estudante;
 
-public interface EstudandeService {
+/**
+ * Interface Service link {@link Estudante}
+ * @author Erick Lima
+ *
+ */
+public interface EstudanteService {
 
 	List<Estudante> buscarEstudantes();
 
